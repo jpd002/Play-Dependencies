@@ -1,0 +1,30 @@
+-- 2014-12-29 UPDATE --
+
+Updated to work with Boost 1.56+ (works with both 1.56 and 1.57 so far)
+
+Automatically choose the currently selected SDK for both iOS and OSX
+
+Fixed a couple places where the wrong $XXX_DEV_CMD was being used
+
+-- END UPDATE --
+
+This is a modified version of Pete Goodliffe's original boost.sh build script,
+(and a couple of other sources whom I can't remember)
+
+The original version didn't work with the 64-bit iPhone Simulator,
+and didn't build at all for OSX.
+
+This works for Boost 1.56 and 1.57. If you need the version that builds 1.55 and older, use this revision:
+  https://gist.github.com/faithfracture/c629ae4c7168216a9856/61be257e1c0839c85743777d0687becad9913bf7
+
+I also ran into an issue where utf8_codecvt_facet.o existed in both the 
+program_options and filesystem libraries. When linking against the
+framework, there was a missing vtable entry for it. Adding the step
+in unpackArchive() that prepends the library name to the .o files
+prevents this error.
+
+I hope this keeps at least one other person from ripping their hair out.
+
+Let me know if you find errors or have optimizations.
+
+I will be updating this as often as necessary.
