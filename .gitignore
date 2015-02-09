@@ -1,0 +1,10 @@
+*.sdf
+Debug
+Release
+ReleaseWithDebugger
+DebugAot
+ReleaseAot
+*.ipch
+*.userprops
+*.suo
+*.user
