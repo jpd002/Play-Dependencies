@@ -17,6 +17,7 @@ LOCAL_SRC_FILES			:=	$(BOOST_PATH)/libs/chrono/src/chrono.cpp \
 							$(BOOST_PATH)/libs/filesystem/src/unique_path.cpp \
 							$(BOOST_PATH)/libs/filesystem/src/utf8_codecvt_facet.cpp \
 							$(BOOST_PATH)/libs/filesystem/src/windows_file_codecvt.cpp
+LOCAL_CFLAGS			:= -Wno-extern-c-compat
 LOCAL_C_INCLUDES		:= $(BOOST_PATH)
 LOCAL_CPP_FEATURES		:= exceptions rtti
 
