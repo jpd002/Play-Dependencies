@@ -1,6 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 BOOST_PATH				:= /cygdrive/c/Components/boost_trunk
+BZLIB_PATH				:= ../../bzip2-1.0.6
 
 include $(CLEAR_VARS)
 
@@ -19,6 +20,22 @@ LOCAL_SRC_FILES			:=	$(BOOST_PATH)/libs/chrono/src/chrono.cpp \
 							$(BOOST_PATH)/libs/filesystem/src/windows_file_codecvt.cpp
 LOCAL_CFLAGS			:= -Wno-extern-c-compat
 LOCAL_C_INCLUDES		:= $(BOOST_PATH)
+LOCAL_CPP_FEATURES		:= exceptions rtti
+
+include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE			:= libbzip2
+LOCAL_SRC_FILES			:=	$(BZLIB_PATH)/blocksort.c \
+							$(BZLIB_PATH)/bzlib.c \
+							$(BZLIB_PATH)/compress.c \
+							$(BZLIB_PATH)/crctable.c \
+							$(BZLIB_PATH)/decompress.c \
+							$(BZLIB_PATH)/huffman.c \
+							$(BZLIB_PATH)/randtable.c
+LOCAL_CFLAGS			:= -Wno-extern-c-compat
+LOCAL_C_INCLUDES		:= $(BZLIB_PATH)
 LOCAL_CPP_FEATURES		:= exceptions rtti
 
 include $(BUILD_STATIC_LIBRARY)
