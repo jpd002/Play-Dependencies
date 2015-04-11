@@ -1,6 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
-BOOST_PATH				:= /cygdrive/c/Components/boost_trunk
+include $(LOCAL_PATH)/ExternalDependencies.mk
+
 BZLIB_PATH				:= ../../bzip2-1.0.6
 
 include $(CLEAR_VARS)
