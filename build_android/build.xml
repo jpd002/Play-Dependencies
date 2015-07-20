@@ -4,19 +4,16 @@
 	<condition property="ndk.dir" value="${env.ANDROID_NDK}">
 		<isset property="env.ANDROID_NDK" />
 	</condition>
-	<condition property="ndkbuildopt" value="-j${env.NUMBER_OF_PROCESSORS}" else="-j4">
+	<condition property="ndkcpu" value="-j${env.NUMBER_OF_PROCESSORS}" else="-j4">
 		<isset property="env.NUMBER_OF_PROCESSORS" />
-	</condition>
-	<condition property="ndkbuildopt" value="${env.NDKBUILDOPT}">
-		<isset property="env.NDKBUILDOPT" />
 	</condition>
 	
 	<target name="build">
 		<exec executable="${ndk.dir}/ndk-build.cmd" failonerror="true" osfamily="windows">
-			<arg line="${ndkbuildopt}"/>
+			<arg value="${ndkcpu}" />
 		</exec>
 		<exec executable="${ndk.dir}/ndk-build" failonerror="true" osfamily="unix">
-			<arg line="${ndkbuildopt}"/>
+			<arg value="${ndkcpu}" />
 		</exec>
 	</target>
 	
