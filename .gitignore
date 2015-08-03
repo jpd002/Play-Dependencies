@@ -1,3 +1,7 @@
+BoostMac/osx
+BoostMac/ios
+BoostMac/src
+BoostMac/*.tar.bz2
 build_android/libs
 build_android/obj
 Debug
