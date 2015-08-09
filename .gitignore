@@ -1,3 +1,5 @@
+appcompat/bin
+appcompat/gen
 BoostMac/osx
 BoostMac/ios
 BoostMac/src
