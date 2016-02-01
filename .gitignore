@@ -1,5 +1,8 @@
 appcompat/bin
 appcompat/gen
+appcompat/build.xml
+appcompat/local.properties
+appcompat/proguard-project.txt
 BoostMac/osx
 BoostMac/ios
 BoostMac/src
