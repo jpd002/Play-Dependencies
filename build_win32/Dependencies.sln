@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unrarsrc-5.2.5", "unrarsrc-5.2.5.vcxproj", "{28F9E5B7-74EB-4DAA-A7C0-E09D2FF43291}"
 EndProject
