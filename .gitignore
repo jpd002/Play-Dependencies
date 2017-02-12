@@ -11,6 +11,9 @@ build_android/libs
 build_android/obj
 Debug
 Release
+bzip2-1.0.6/build*
+zlib-1.2.8/build*
+glew-2.0.0/build*
 *.ipch
 *.user
 *.userprops
