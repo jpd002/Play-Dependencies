@@ -8,15 +8,15 @@ if (CMAKE_C_COMPILER_ID MATCHES "GNU")
 endif ()
 
 set(bz2_srcs
-    blocksort.c
-    huffman.c
-    crctable.c
-    randtable.c
-    compress.c
-    decompress.c
-    bzlib.c)
+    ../../bzip2-1.0.6/blocksort.c
+    ../../bzip2-1.0.6/huffman.c
+    ../../bzip2-1.0.6/crctable.c
+    ../../bzip2-1.0.6/randtable.c
+    ../../bzip2-1.0.6/compress.c
+    ../../bzip2-1.0.6/decompress.c
+    ../../bzip2-1.0.6/bzlib.c)
 if(WIN32)
-  list(APPEND bz2_srcs libbz2.def)
+  list(APPEND bz2_srcs ../../bzip2-1.0.6/libbz2.def)
 endif()
 
 add_library(bz2
