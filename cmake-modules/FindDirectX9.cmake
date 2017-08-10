@@ -153,9 +153,13 @@ if (WIN32)
 
     if (WINDOWS_XP)
         # Windows 7 SDKs, used by XP toolset, do not include d3d.h
-        find_dxsdk_header   (D3D     d3d.h)
+        find_dxsdk_header  (D3D          d3d.h)
+        find_dxsdk_library (DXGUID       dxguid)
+        find_dxsdk_library (D3DCOMPILER  d3dcompiler)
     else ()
-        find_winsdk_header  (D3D     d3d.h)
+        find_winsdk_header  (D3D          d3d.h)
+        find_winsdk_library (DXGUID       dxguid)
+        find_winsdk_library (D3DCOMPILER  d3dcompiler)
     endif ()
     find_combined       (D3D     D3D DDRAW)
 
