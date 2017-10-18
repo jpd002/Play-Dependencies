@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bzip2-1.0.6", "bzip2-1.0.6.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib-1.2.8", "zlib-1.2.8.vcxproj", "{55FA4E66-2FBB-4165-A9CA-D126D13879BD}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sqlite-3.15.1", "sqlite-3.15.1.vcxproj", "{BFC65F0C-A775-46E5-85F4-9470ECBD5DF3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sqlite-3.20.1", "sqlite-3.20.1.vcxproj", "{BFC65F0C-A775-46E5-85F4-9470ECBD5DF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
