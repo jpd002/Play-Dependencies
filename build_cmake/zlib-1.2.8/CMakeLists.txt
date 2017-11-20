@@ -21,3 +21,5 @@ set(zlib_srcs
 )
 
 add_library(zlibstatic ${zlib_srcs})
+target_include_directories(zlibstatic PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../zlib-1.2.8/)
+

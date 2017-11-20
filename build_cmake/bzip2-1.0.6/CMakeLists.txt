@@ -25,3 +25,4 @@ set_target_properties(bz2
   PROPERTIES
     VERSION   1.0.6
     SOVERSION 1.0)
+target_include_directories(bz2 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../bzip2-1.0.6/)
