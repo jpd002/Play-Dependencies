@@ -10,4 +10,4 @@ endif()
 
 add_library(d3dcompiler INTERFACE)
 target_link_libraries(d3dcompiler INTERFACE ${D3DCOMPILER_PATH})
-target_include_directories(d3dcompiler INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/Include)
+target_include_directories(d3dcompiler SYSTEM INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/Include)

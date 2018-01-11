@@ -10,4 +10,4 @@ endif()
 
 add_library(tdemu INTERFACE)
 target_link_libraries(tdemu INTERFACE ${TDEMU_PATH})
-target_include_directories(tdemu INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(tdemu INTERFACE SYSTEM ${CMAKE_CURRENT_SOURCE_DIR})
