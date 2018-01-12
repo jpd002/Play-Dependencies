@@ -21,6 +21,7 @@ endif()
 
 add_library(bz2
     ${bz2_srcs})
+add_library(BZip2::BZip2 ALIAS bz2)
 set_target_properties(bz2
   PROPERTIES
     VERSION   1.0.6
