@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 2.8.8)
+
+project(tdemu)
+
+if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+	set(TDEMU_PATH ${CMAKE_CURRENT_SOURCE_DIR}/TDEmu64.lib)
+else()
+	set(TDEMU_PATH ${CMAKE_CURRENT_SOURCE_DIR}/TDEmu.lib)
+endif()
+
+add_library(tdemu INTERFACE)
+target_link_libraries(tdemu INTERFACE ${TDEMU_PATH})
+target_include_directories(tdemu INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
