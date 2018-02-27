@@ -66,4 +66,5 @@ endif ()
 
 target_link_libraries (glew LINK_PUBLIC ${GLEW_LIBRARIES})
 target_link_libraries (glew_s ${GLEW_LIBRARIES})
-
+target_include_directories(glew PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(glew_s PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)

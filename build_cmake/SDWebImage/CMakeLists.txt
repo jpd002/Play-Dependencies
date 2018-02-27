@@ -25,3 +25,5 @@ set(SDWebImage_src
 
 add_library(SDWebImage_Static ${SDWebImage_src})
 set_target_properties(SDWebImage_Static PROPERTIES COMPILE_FLAGS "-x objective-c -fobjc-arc")
+target_include_directories(SDWebImage_Static PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../SDWebImage/)
+
