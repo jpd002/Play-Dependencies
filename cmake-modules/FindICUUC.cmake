@@ -14,7 +14,7 @@ endif()
 find_path( ICUUC_INCLUDE_DIR unicode/unistr.h )
 
 find_library( ICUUC_LIBRARY
-              NAMES icuuc )
+              NAMES icuuc NO_CMAKE_PATH)
 
 # handle the QUIETLY and REQUIRED arguments and set ICUUC_FOUND to TRUE if
 # all listed variables are TRUE
