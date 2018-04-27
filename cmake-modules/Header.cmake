@@ -1,11 +1,6 @@
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL "${CMAKE_SOURCE_DIR}")
 	option(TARGET_IOS "Enable building for iOS" OFF)
 
-	# macOS deployment target needs to be set before 'project' to work
-	if(APPLE AND NOT TARGET_IOS)
-		set(CMAKE_OSX_DEPLOYMENT_TARGET "10.9" CACHE STRING "Minimum OS X deployment version")
-	endif()
-
 	if(ANDROID)
 		message("-- Generating for Android --")
 		set(TARGET_PLATFORM_ANDROID TRUE)
