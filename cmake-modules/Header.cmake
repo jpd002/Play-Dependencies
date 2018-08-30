@@ -56,6 +56,7 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL "${CMAKE_SOURCE_DIR}")
 		add_definitions(-D_SCL_SECURE_NO_WARNINGS)
 		add_definitions(-D_UNICODE)
 		add_definitions(-DUNICODE)
+		add_definitions(-D_ENABLE_EXTENDED_ALIGNED_STORAGE)
 
 		if(DEFINED VTUNE_ENABLED)
 			add_definitions(-DVTUNE_ENABLED)
