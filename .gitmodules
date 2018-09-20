@@ -1,6 +1,6 @@
 [submodule "boost-cmake"]
 	path = boost-cmake
-	url = https://github.com/Orphis/boost-cmake.git
+	url = https://github.com/jpd002/boost-cmake.git
 [submodule "SDWebImage"]
 	path = SDWebImage
 	url = https://github.com/rs/SDWebImage.git
