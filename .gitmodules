@@ -4,3 +4,6 @@
 [submodule "SDWebImage"]
 	path = SDWebImage
 	url = https://github.com/rs/SDWebImage.git
+[submodule "nlohmann_json"]
+	path = nlohmann_json
+	url = https://github.com/nlohmann/json.git
