@@ -54,5 +54,8 @@ set(unrar_srcs
 )
 
 add_library(unrar ${unrar_srcs})
+if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX OR (CMAKE_C_COMPILER_ID MATCHES "Clang") OR (CMAKE_CXX_COMPILER_ID MATCHES "Clang"))
+	target_compile_options(unrar PRIVATE "-w")
+endif()
 target_compile_definitions(unrar PRIVATE -DSILENT)
 target_include_directories(unrar PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../unrarsrc-5.2.5/)
