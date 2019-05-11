@@ -38,18 +38,10 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL "${CMAKE_SOURCE_DIR}")
 			FORCE)
 	endif()
 
+	MESSAGE("-- Build type: ${CMAKE_BUILD_TYPE}")
+
 	set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -D_DEBUG")
 	set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -DNDEBUG")
-
-	# definitions
-	if(NOT MSVC)
-		MESSAGE("-- Build type: ${CMAKE_BUILD_TYPE}")
-		if(CMAKE_BUILD_TYPE STREQUAL "Release")
-			add_definitions(-DNDEBUG)
-		else()
-			add_definitions(-D_DEBUG)
-		endif()
-	endif()
 
 	if(TARGET_PLATFORM_WIN32)
 		add_definitions(-D_CRT_SECURE_NO_WARNINGS)
