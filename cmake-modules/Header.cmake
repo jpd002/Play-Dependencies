@@ -24,6 +24,11 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL "${CMAKE_SOURCE_DIR}")
 	else()
 		message("-- Generating for Unix compatible platform --")
 		set(TARGET_PLATFORM_UNIX TRUE)
+		if (${CMAKE_SYSTEM_PROCESSOR} MATCHES "^(aarch64.*|AARCH64.*)")
+			message("-- Arch: aarch64 --")
+			set(TARGET_PLATFORM_UNIX_AARCH64 TRUE)
+		endif()
+
 	endif()
 	
 	set(CMAKE_CXX_STANDARD 14)
