@@ -9,7 +9,7 @@
 #   In this case it will always be the most up-to-date SDK found in the CMAKE_IOS_DEVELOPER_ROOT path.
 #   If set manually, this will force the use of a specific SDK version
 
-set(IPHONEOS_DEPLOYMENT_TARGET 9.0)
+set(IPHONEOS_DEPLOYMENT_TARGET 11.0)
 set(IOS TRUE)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mios-version-min=${IPHONEOS_DEPLOYMENT_TARGET}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
@@ -58,8 +58,7 @@ set(CMAKE_OSX_SYSROOT ${CMAKE_IOS_SDK_ROOT} CACHE PATH "Sysroot used for iOS sup
 # set the architecture for iOS 
 if(IOS_PLATFORM STREQUAL "OS")
   # When ffmpeg has been rebuilt for arm64 use:
-  set(IOS_ARCH "armv7;arm64")
-  #set(IOS_ARCH "armv7")
+  set(IOS_ARCH "arm64")
 else()
   set(IOS_ARCH "i386;x86_64")
 endif()
