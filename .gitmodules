@@ -4,3 +4,6 @@
 [submodule "SDWebImage"]
 	path = SDWebImage
 	url = https://github.com/rs/SDWebImage.git
+[submodule "ghc_filesystem"]
+	path = ghc_filesystem
+	url = https://github.com/gulrak/filesystem.git
