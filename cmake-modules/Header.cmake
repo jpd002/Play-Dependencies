@@ -69,5 +69,8 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL "${CMAKE_SOURCE_DIR}")
 				MESSAGE(FATAL_ERROR "VTUNE_PATH was not defined")
 			endif()
 		endif()
+	elseif(TARGET_PLATFORM_UNIX)
+		# RPI 32bit require this to be able to read files bigger than 2GB
+		add_definitions(-D_FILE_OFFSET_BITS=64)
 	endif()
 endif()
