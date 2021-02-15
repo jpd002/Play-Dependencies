@@ -27,8 +27,10 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL "${CMAKE_SOURCE_DIR}")
 		if (${CMAKE_SYSTEM_PROCESSOR} MATCHES "^(aarch64.*|AARCH64.*)")
 			message("-- Arch: aarch64 --")
 			set(TARGET_PLATFORM_UNIX_AARCH64 TRUE)
+		elseif(${CMAKE_SYSTEM_PROCESSOR} MATCHES "^arm")
+			message("-- Arch: arm --")
+			set(TARGET_PLATFORM_UNIX_ARM TRUE)
 		endif()
-
 	endif()
 	
 	set(CMAKE_CXX_STANDARD 17)
