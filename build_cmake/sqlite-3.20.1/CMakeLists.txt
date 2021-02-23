@@ -7,3 +7,4 @@ set(sqlite3_srcs
 )
 
 add_library(sqlite3static ${sqlite3_srcs})
+target_link_libraries(sqlite3static ${CMAKE_DL_LIBS})
