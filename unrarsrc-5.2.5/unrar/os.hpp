@@ -196,6 +196,11 @@
   #endif
 #endif
 
+#if defined(__EMSCRIPTEN__)
+  #define LITTLE_ENDIAN
+  #undef BIG_ENDIAN
+#endif
+
 #if defined(__sparc) || defined(sparc) || defined(__hpux)
   #ifndef BIG_ENDIAN
      #define BIG_ENDIAN
