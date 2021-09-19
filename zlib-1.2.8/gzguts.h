@@ -27,6 +27,10 @@
 #endif
 #include <fcntl.h>
 
+#if defined(__EMSCRIPTEN__)
+#  include <unistd.h>
+#endif
+
 #ifdef _WIN32
 #  include <stddef.h>
 #endif
