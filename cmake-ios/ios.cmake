@@ -9,7 +9,7 @@
 #   In this case it will always be the most up-to-date SDK found in the CMAKE_IOS_DEVELOPER_ROOT path.
 #   If set manually, this will force the use of a specific SDK version
 
-set(IPHONEOS_DEPLOYMENT_TARGET 12.2)
+set(IPHONEOS_DEPLOYMENT_TARGET 13.0)
 set(IOS TRUE)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mios-version-min=${IPHONEOS_DEPLOYMENT_TARGET}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
