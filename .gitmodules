@@ -4,3 +4,6 @@
 [submodule "ghc_filesystem"]
 	path = ghc_filesystem
 	url = https://github.com/gulrak/filesystem.git
+[submodule "zstd"]
+	path = zstd
+	url = https://github.com/facebook/zstd.git
