@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.5)
-
 project(lzmasdk)
 
 set(lzmasdk_srcs

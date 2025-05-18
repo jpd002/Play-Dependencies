@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.5)
-
 project(bzip2 C)
 
 if (CMAKE_C_COMPILER_ID MATCHES "GNU")

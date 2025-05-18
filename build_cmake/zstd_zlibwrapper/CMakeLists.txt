@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.5)
-
 project(libzstdwapper C)
 
 find_package(ZLIB)
@@ -7,8 +5,8 @@ if(NOT ZLIB_FOUND)
 	MESSAGE("-- Using Provided zlib source")
 	if(NOT TARGET zlibstatic)
 		add_subdirectory(
-			${CMAKE_CURRENT_SOURCE_DIR}/../zlib-1.2.8
-			${CMAKE_CURRENT_BINARY_DIR}/zlib-1.2.8
+			${CMAKE_CURRENT_SOURCE_DIR}/../zlib
+			${CMAKE_CURRENT_BINARY_DIR}/zlib
 		)
 	endif()
 endif(NOT ZLIB_FOUND)
